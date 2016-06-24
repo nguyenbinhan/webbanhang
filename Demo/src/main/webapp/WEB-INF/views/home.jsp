@@ -5,14 +5,15 @@
 <title>Home</title>
 </head>
 <body>
-	<h1>Hello world!</h1>
+	<h1>^^ !</h1>
 
-	<P>The time on the server is ${serverTime}.</P>
+	<P>The message is ${message}.</P>
 	<form action="" method="post">
 		ID <input type="text" value="" name="id"> <br /> 
 		Password <input type="password" value="" name="pass"> <br />
 		Special <input type="text" value="" name="special"> <br />
 			<input type="submit" value="Submit">
 	</form>
+	
 </body>
 </html>

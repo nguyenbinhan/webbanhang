@@ -25,7 +25,7 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.POST)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 
@@ -34,25 +34,28 @@ public class HomeController {
 
 		String formattedDate = dateFormat.format(date);
 
-		model.addAttribute("serverTime", formattedDate);
+		String kk = "Duyen do ne";
+		model.addAttribute("message", kk);
 
 		return "home";
 	}
 
-	@RequestMapping(value = "/", method = RequestMethod.POST)
-	public String inghhjdex(HttpServletRequest request ,@RequestParam String id, @RequestParam String pass, Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate);
-		model.addAttribute("id",id);
-        model.addAttribute("pass",pass);
-        request.setAttribute("user", request.getParameter("special"));
-		return "index";
-	}
+//	@RequestMapping(value = "/", method = RequestMethod.GET)
+//	public String inghhjdex(@RequestParam String id, @RequestParam String pass, Locale locale, Model model) {
+////		if(request.getParameter("special") == null){
+////		
+////		logger.info("Welcome home! The client locale is {}.", locale);
+////
+////		Date date = new Date();
+////		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+////
+////		String formattedDate = dateFormat.format(date);
+////			return "home";
+////		}
+//		model.addAttribute("id",id);
+//        model.addAttribute("pass",pass);
+//        //request.setAttribute("user", request.getParameter("special"));
+//		return "index";
+//	}
 
 }
