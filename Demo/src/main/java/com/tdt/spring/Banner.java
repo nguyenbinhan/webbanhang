@@ -8,7 +8,6 @@ public class Banner {
 	private String background;
 
 	public Banner() {
-
 		
 	}
 
