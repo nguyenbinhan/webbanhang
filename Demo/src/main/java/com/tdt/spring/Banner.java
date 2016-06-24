@@ -9,6 +9,7 @@ public class Banner {
 
 	public Banner() {
 
+		
 	}
 
 	public Banner(String src, String ten, String noidung, String background) {
